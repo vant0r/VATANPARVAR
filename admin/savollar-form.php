@@ -183,8 +183,20 @@ vpy_panel_sidebar('savollar', true);
         <?php endif; ?>
         <div class="field">
             <label>Yangi rasm yuklash</label>
-            <input type="file" name="rasm" accept="image/jpeg,image/png,image/webp,image/gif">
-            <p style="font-size:0.8rem;color:var(--muted);margin-top:6px">JPG, PNG, WEBP yoki GIF · Yo'l belgisi, vaziyat sxemasi yoki diagramma uchun foydali</p>
+            <div id="dropZone" style="border:2px dashed var(--border-strong);border-radius:14px;padding:40px 20px;text-align:center;cursor:pointer;transition:all 0.3s;background:rgba(255,253,249,0.6);position:relative">
+                <div id="dropContent">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:48px;height:48px;margin:0 auto 12px;color:var(--muted)"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <p style="font-size:0.95rem;color:var(--dark);font-weight:600;margin-bottom:6px">Rasmni shu yerga tashlang</p>
+                    <p style="font-size:0.82rem;color:var(--muted)">yoki bosib tanlang · Telegramdan surib olib kelsa ham bo'ladi</p>
+                    <p style="font-size:0.75rem;color:var(--muted);margin-top:8px">JPG, PNG, WEBP yoki GIF · Max 5MB</p>
+                </div>
+                <div id="dropPreview" style="display:none">
+                    <img id="previewImg" src="" alt="Preview" style="max-width:300px;max-height:200px;border-radius:10px;object-fit:contain;margin-bottom:10px">
+                    <p id="previewName" style="font-size:0.85rem;color:var(--dark);font-weight:500"></p>
+                    <button type="button" id="removePreview" style="margin-top:8px;padding:6px 16px;border-radius:8px;border:1px solid #ef4444;color:#ef4444;background:transparent;cursor:pointer;font-size:0.8rem;font-weight:600">✕ O'chirish</button>
+                </div>
+            </div>
+            <input type="file" name="rasm" id="rasmInput" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none">
         </div>
     </div>
 
@@ -223,4 +235,143 @@ vpy_panel_sidebar('savollar', true);
     </div>
 </form>
 </main>
+<script>
+(function(){
+    var dropZone = document.getElementById('dropZone');
+    var fileInput = document.getElementById('rasmInput');
+    var dropContent = document.getElementById('dropContent');
+    var dropPreview = document.getElementById('dropPreview');
+    var previewImg = document.getElementById('previewImg');
+    var previewName = document.getElementById('previewName');
+    var removeBtn = document.getElementById('removePreview');
+
+    if (!dropZone || !fileInput) return;
+
+    // Click to select file
+    dropZone.addEventListener('click', function(e){
+        if (e.target === removeBtn || e.target.closest('#removePreview')) return;
+        fileInput.click();
+    });
+
+    // File input change
+    fileInput.addEventListener('change', function(){
+        if (fileInput.files.length > 0) {
+            showPreview(fileInput.files[0]);
+        }
+    });
+
+    // Drag events
+    ['dragenter', 'dragover'].forEach(function(ev){
+        dropZone.addEventListener(ev, function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.style.borderColor = 'var(--primary)';
+            dropZone.style.background = 'rgba(13,107,78,0.04)';
+            dropZone.style.transform = 'scale(1.01)';
+        });
+    });
+
+    ['dragleave', 'drop'].forEach(function(ev){
+        dropZone.addEventListener(ev, function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.style.borderColor = 'var(--border-strong)';
+            dropZone.style.background = 'rgba(255,253,249,0.6)';
+            dropZone.style.transform = 'scale(1)';
+        });
+    });
+
+    // Drop handler
+    dropZone.addEventListener('drop', function(e){
+        e.preventDefault();
+        var files = e.dataTransfer.files;
+        if (files.length > 0) {
+            var file = files[0];
+            if (isValidImage(file)) {
+                // Transfer the dropped file to the file input
+                var dt = new DataTransfer();
+                dt.items.add(file);
+                fileInput.files = dt.files;
+                showPreview(file);
+            } else {
+                alert('Faqat rasm fayllari qabul qilinadi (JPG, PNG, WEBP, GIF), max 5MB');
+            }
+        }
+    });
+
+    // Also handle paste (Ctrl+V) for screenshots
+    document.addEventListener('paste', function(e){
+        var items = e.clipboardData && e.clipboardData.items;
+        if (!items) return;
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') !== -1) {
+                var file = items[i].getAsFile();
+                if (file && isValidImage(file)) {
+                    var dt = new DataTransfer();
+                    dt.items.add(file);
+                    fileInput.files = dt.files;
+                    showPreview(file);
+                    e.preventDefault();
+                    break;
+                }
+            }
+        }
+    });
+
+    // Remove preview
+    removeBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        fileInput.value = '';
+        dropContent.style.display = '';
+        dropPreview.style.display = 'none';
+        previewImg.src = '';
+    });
+
+    function isValidImage(file) {
+        var validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+        if (validTypes.indexOf(file.type) === -1) return false;
+        if (file.size > 5 * 1024 * 1024) return false; // Max 5MB
+        return true;
+    }
+
+    function showPreview(file) {
+        var reader = new FileReader();
+        reader.onload = function(e){
+            previewImg.src = e.target.result;
+            previewName.textContent = file.name + ' (' + formatSize(file.size) + ')';
+            dropContent.style.display = 'none';
+            dropPreview.style.display = '';
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function formatSize(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+        return (bytes / 1048576).toFixed(1) + ' MB';
+    }
+
+    // Global drag highlight for the whole page
+    var dragCounter = 0;
+    document.addEventListener('dragenter', function(e){
+        dragCounter++;
+        if (e.dataTransfer && e.dataTransfer.types.indexOf('Files') !== -1) {
+            dropZone.style.borderColor = 'var(--accent)';
+            dropZone.style.boxShadow = '0 0 20px rgba(232,168,56,0.2)';
+        }
+    });
+    document.addEventListener('dragleave', function(){
+        dragCounter--;
+        if (dragCounter === 0) {
+            dropZone.style.borderColor = 'var(--border-strong)';
+            dropZone.style.boxShadow = 'none';
+        }
+    });
+    document.addEventListener('drop', function(){
+        dragCounter = 0;
+        dropZone.style.borderColor = 'var(--border-strong)';
+        dropZone.style.boxShadow = 'none';
+    });
+})();
+</script>
 <?php vpy_panel_foot(); ?>
