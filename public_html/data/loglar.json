@@ -1,0 +1,1636 @@
+[
+    {
+        "id": 1,
+        "type": "logs_cleared",
+        "message": "Loglar tozalandi",
+        "meta": {
+            "admin": 1
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 19:39:57"
+    },
+    {
+        "id": 2,
+        "type": "payment_init",
+        "message": "To'lov: Premium — humo",
+        "meta": {
+            "user_id": 3,
+            "payment_id": 1
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 19:41:13"
+    },
+    {
+        "id": 3,
+        "type": "payment_rejected",
+        "message": "To'lov rad etildi",
+        "meta": {
+            "id": 1,
+            "admin": 1
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 19:41:46"
+    },
+    {
+        "id": 4,
+        "type": "test_finish",
+        "message": "Test yakunlandi: 2/20",
+        "meta": {
+            "user_id": 3,
+            "type": "full"
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 19:46:36"
+    },
+    {
+        "id": 5,
+        "type": "payment_init",
+        "message": "To'lov: Standart — visa",
+        "meta": {
+            "user_id": 3,
+            "payment_id": 2
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 19:48:02"
+    },
+    {
+        "id": 6,
+        "type": "payment_approved",
+        "message": "To'lov tasdiqlandi",
+        "meta": {
+            "id": 2,
+            "admin": 1
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 19:48:21"
+    },
+    {
+        "id": 7,
+        "type": "payment_init",
+        "message": "To'lov: Kunlik — visa",
+        "meta": {
+            "user_id": 3,
+            "payment_id": 3
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 19:58:05"
+    },
+    {
+        "id": 8,
+        "type": "payment_init",
+        "message": "To'lov: Kunlik — visa",
+        "meta": {
+            "user_id": 3,
+            "payment_id": 4
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 19:58:06"
+    },
+    {
+        "id": 9,
+        "type": "payment_approved",
+        "message": "To'lov tasdiqlandi",
+        "meta": {
+            "id": 3,
+            "admin": 1,
+            "comment": ""
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 19:59:33"
+    },
+    {
+        "id": 10,
+        "type": "payment_init",
+        "message": "To'lov: Kunlik — visa",
+        "meta": {
+            "user_id": 3,
+            "payment_id": 5
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 20:14:34"
+    },
+    {
+        "id": 11,
+        "type": "register",
+        "message": "Yangi foydalanuvchi",
+        "meta": {
+            "user_id": 4,
+            "phone": "+998909889898"
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": null,
+        "created_at": "2026-06-21 20:18:51"
+    },
+    {
+        "id": 12,
+        "type": "referral",
+        "message": "Referral bonus",
+        "meta": {
+            "referrer_id": 3,
+            "new_user_id": 4
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": null,
+        "created_at": "2026-06-21 20:18:51"
+    },
+    {
+        "id": 13,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 4
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 4,
+        "created_at": "2026-06-21 20:23:17"
+    },
+    {
+        "id": 14,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 4
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 4,
+        "created_at": "2026-06-21 20:32:49"
+    },
+    {
+        "id": 15,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "37.110.211.16",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-21 20:37:45"
+    },
+    {
+        "id": 16,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 1,
+            "count": 20
+        },
+        "ip": "37.110.211.24",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 23:02:02"
+    },
+    {
+        "id": 17,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 1,
+            "count": 20
+        },
+        "ip": "37.110.211.24",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 23:10:59"
+    },
+    {
+        "id": 18,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 2,
+            "count": 20
+        },
+        "ip": "37.110.211.24",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 23:12:01"
+    },
+    {
+        "id": 19,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 3,
+            "count": 20
+        },
+        "ip": "37.110.211.24",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-21 23:19:42"
+    },
+    {
+        "id": 20,
+        "type": "telegram_update",
+        "message": "Yangi xabar",
+        "meta": {
+            "update_id": 440052915,
+            "message": {
+                "message_id": 26,
+                "from": {
+                    "id": 8041403429,
+                    "is_bot": false,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "language_code": "uz"
+                },
+                "chat": {
+                    "id": 8041403429,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "type": "private"
+                },
+                "date": 1782104383,
+                "document": {
+                    "file_name": "TBC#1821425515.pdf",
+                    "mime_type": "application/pdf",
+                    "file_id": "BQACAgIAAxkBAAMaajjBP3ccs68RvdpI9xqFp_xFAY4AAl2UAAKDaMhJ3XbNStApcNc8BA",
+                    "file_unique_id": "AgADXZQAAoNoyEk",
+                    "file_size": 70759
+                }
+            }
+        },
+        "ip": "91.108.5.152",
+        "ua": "",
+        "user_id": null,
+        "created_at": "2026-06-22 09:59:43"
+    },
+    {
+        "id": 21,
+        "type": "telegram_update",
+        "message": "Yangi xabar",
+        "meta": {
+            "update_id": 440052916,
+            "message": {
+                "message_id": 28,
+                "from": {
+                    "id": 8041403429,
+                    "is_bot": false,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "language_code": "uz"
+                },
+                "chat": {
+                    "id": 8041403429,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "type": "private"
+                },
+                "date": 1782109040,
+                "text": "/yordam",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 7,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        "ip": "91.108.5.152",
+        "ua": "",
+        "user_id": null,
+        "created_at": "2026-06-22 11:17:20"
+    },
+    {
+        "id": 22,
+        "type": "telegram_update",
+        "message": "Yangi xabar",
+        "meta": {
+            "update_id": 440052917,
+            "message": {
+                "message_id": 30,
+                "from": {
+                    "id": 8041403429,
+                    "is_bot": false,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "language_code": "uz"
+                },
+                "chat": {
+                    "id": 8041403429,
+                    "first_name": "Adhamjonov",
+                    "username": "Kibersud",
+                    "type": "private"
+                },
+                "date": 1782109043,
+                "text": "/start",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        "ip": "91.108.5.152",
+        "ua": "",
+        "user_id": null,
+        "created_at": "2026-06-22 11:17:23"
+    },
+    {
+        "id": 23,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.210.59",
+        "ua": "Mozilla/5.0 (Linux; Android 13; 23053RN02A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/148.0.7778.215 Mobile Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 11:17:40"
+    },
+    {
+        "id": 24,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.210.59",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.215 Mobile Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 11:18:07"
+    },
+    {
+        "id": 25,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.210.59",
+        "ua": "Mozilla/5.0 (Linux; Android 13; 23053RN02A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/148.0.7778.215 Mobile Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 11:18:19"
+    },
+    {
+        "id": 26,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.210.59",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.215 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 11:18:37"
+    },
+    {
+        "id": 27,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 4,
+            "count": 20
+        },
+        "ip": "95.214.210.59",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.215 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 11:19:27"
+    },
+    {
+        "id": 28,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 20:26:04"
+    },
+    {
+        "id": 29,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "213.230.74.48",
+        "ua": "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko",
+        "user_id": 1,
+        "created_at": "2026-06-22 20:27:30"
+    },
+    {
+        "id": 30,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 20:28:03"
+    },
+    {
+        "id": 31,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 20:37:32"
+    },
+    {
+        "id": 32,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 20:38:37"
+    },
+    {
+        "id": 33,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:09:45"
+    },
+    {
+        "id": 34,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 7,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:32:58"
+    },
+    {
+        "id": 35,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 6,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:34:21"
+    },
+    {
+        "id": 36,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 5,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:35:24"
+    },
+    {
+        "id": 37,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 8,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:38:05"
+    },
+    {
+        "id": 38,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 9,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:41:49"
+    },
+    {
+        "id": 39,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:47:18"
+    },
+    {
+        "id": 40,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "213.230.74.48",
+        "ua": "Mozilla/5.0 (Linux; Android 12; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:47:22"
+    },
+    {
+        "id": 41,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 21:47:31"
+    },
+    {
+        "id": 42,
+        "type": "test_finish",
+        "message": "Test yakunlandi: 1/19",
+        "meta": {
+            "user_id": 3,
+            "type": "bilet"
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 21:48:21"
+    },
+    {
+        "id": 43,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 21:49:35"
+    },
+    {
+        "id": 44,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:49:48"
+    },
+    {
+        "id": 45,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 10,
+            "count": 19
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:50:15"
+    },
+    {
+        "id": 46,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 11,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:52:35"
+    },
+    {
+        "id": 47,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 10,
+            "count": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:54:38"
+    },
+    {
+        "id": 48,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 12,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:55:08"
+    },
+    {
+        "id": 49,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 13,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 21:59:58"
+    },
+    {
+        "id": 50,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 3
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 22:01:13"
+    },
+    {
+        "id": 51,
+        "type": "test_finish",
+        "message": "Test yakunlandi: 16/19",
+        "meta": {
+            "user_id": 3,
+            "type": "bilet"
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-22 22:05:21"
+    },
+    {
+        "id": 52,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 15,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:09:59"
+    },
+    {
+        "id": 53,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 14,
+            "count": 19
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:10:29"
+    },
+    {
+        "id": 54,
+        "type": "logout",
+        "message": "Tizimdan chiqish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:12:26"
+    },
+    {
+        "id": 55,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:13:44"
+    },
+    {
+        "id": 56,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 16,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:13:59"
+    },
+    {
+        "id": 57,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 17,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:16:16"
+    },
+    {
+        "id": 58,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 14,
+            "count": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:17:29"
+    },
+    {
+        "id": 59,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 18,
+            "count": 1
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:20:21"
+    },
+    {
+        "id": 60,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 18,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:24:31"
+    },
+    {
+        "id": 61,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 19,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:30:15"
+    },
+    {
+        "id": 62,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 20,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:40:20"
+    },
+    {
+        "id": 63,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 21,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:48:08"
+    },
+    {
+        "id": 64,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 22,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 22:55:45"
+    },
+    {
+        "id": 65,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 23,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 23:02:14"
+    },
+    {
+        "id": 66,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 24,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-22 23:07:31"
+    },
+    {
+        "id": 67,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 25,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 05:57:16"
+    },
+    {
+        "id": 68,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 26,
+            "count": 19
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 05:58:51"
+    },
+    {
+        "id": 69,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 27,
+            "count": 20
+        },
+        "ip": "95.214.211.18",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 06:05:06"
+    },
+    {
+        "id": 70,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 27,
+            "count": 20
+        },
+        "ip": "95.214.210.75",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 06:12:17"
+    },
+    {
+        "id": 71,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 28,
+            "count": 20
+        },
+        "ip": "95.214.210.75",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 06:12:30"
+    },
+    {
+        "id": 72,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 29,
+            "count": 20
+        },
+        "ip": "95.214.210.210",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 08:02:21"
+    },
+    {
+        "id": 73,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 30,
+            "count": 20
+        },
+        "ip": "95.214.210.210",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 08:20:45"
+    },
+    {
+        "id": 74,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 31,
+            "count": 20
+        },
+        "ip": "95.214.210.210",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 08:26:11"
+    },
+    {
+        "id": 75,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "185.139.138.73",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+        "user_id": 1,
+        "created_at": "2026-06-23 10:54:24"
+    },
+    {
+        "id": 76,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 32,
+            "count": 20
+        },
+        "ip": "37.110.211.33",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 11:08:04"
+    },
+    {
+        "id": 77,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 33,
+            "count": 20
+        },
+        "ip": "95.214.210.102",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 13:41:01"
+    },
+    {
+        "id": 78,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 34,
+            "count": 20
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 13:46:53"
+    },
+    {
+        "id": 79,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 35,
+            "count": 20
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 13:47:56"
+    },
+    {
+        "id": 80,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 36,
+            "count": 20
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 13:53:25"
+    },
+    {
+        "id": 81,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 37,
+            "count": 20
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Linux; Android 13; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.7827.91 Mobile Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 13:57:48"
+    },
+    {
+        "id": 82,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 38,
+            "count": 20
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:08:15"
+    },
+    {
+        "id": 83,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 39,
+            "count": 19
+        },
+        "ip": "37.110.214.141",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:14:58"
+    },
+    {
+        "id": 84,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 39,
+            "count": 1
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:22:03"
+    },
+    {
+        "id": 85,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 26,
+            "count": 1
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:28:25"
+    },
+    {
+        "id": 86,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 40,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:31:31"
+    },
+    {
+        "id": 87,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 41,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:41:46"
+    },
+    {
+        "id": 88,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 42,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:42:23"
+    },
+    {
+        "id": 89,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 43,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:45:26"
+    },
+    {
+        "id": 90,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 44,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:46:13"
+    },
+    {
+        "id": 91,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 45,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:47:34"
+    },
+    {
+        "id": 92,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 46,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:47:59"
+    },
+    {
+        "id": 93,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 47,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:48:17"
+    },
+    {
+        "id": 94,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 48,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:57:49"
+    },
+    {
+        "id": 95,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 49,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 14:58:34"
+    },
+    {
+        "id": 96,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 50,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:02:13"
+    },
+    {
+        "id": 97,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 51,
+            "count": 19
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:03:09"
+    },
+    {
+        "id": 98,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 42,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:05:38"
+    },
+    {
+        "id": 99,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 52,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:06:09"
+    },
+    {
+        "id": 100,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 51,
+            "count": 1
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:07:12"
+    },
+    {
+        "id": 101,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 53,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:09:30"
+    },
+    {
+        "id": 102,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 54,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:12:22"
+    },
+    {
+        "id": 103,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 55,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:21:27"
+    },
+    {
+        "id": 104,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 57,
+            "count": 19
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:25:31"
+    },
+    {
+        "id": 105,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 56,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:25:48"
+    },
+    {
+        "id": 106,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 48,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:30:54"
+    },
+    {
+        "id": 107,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 60,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:40:44"
+    },
+    {
+        "id": 108,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 59,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:41:41"
+    },
+    {
+        "id": 109,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 58,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:41:57"
+    },
+    {
+        "id": 110,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 62,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:42:34"
+    },
+    {
+        "id": 111,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 61,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:43:26"
+    },
+    {
+        "id": 112,
+        "type": "login",
+        "message": "Tizimga kirish",
+        "meta": {
+            "user_id": 1
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:47:26"
+    },
+    {
+        "id": 113,
+        "type": "delete_bilet",
+        "message": "Bilet bo'yicha savollar o'chirildi",
+        "meta": {
+            "bilet_id": 62,
+            "count": 18
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:48:17"
+    },
+    {
+        "id": 114,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 62,
+            "count": 15
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:48:47"
+    },
+    {
+        "id": 115,
+        "type": "delete_bilet",
+        "message": "Bilet bo'yicha savollar o'chirildi",
+        "meta": {
+            "bilet_id": 42,
+            "count": 40
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:49:18"
+    },
+    {
+        "id": 116,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 42,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:50:22"
+    },
+    {
+        "id": 117,
+        "type": "delete_bilet",
+        "message": "Bilet bo'yicha savollar o'chirildi",
+        "meta": {
+            "bilet_id": 48,
+            "count": 36
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:51:19"
+    },
+    {
+        "id": 118,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 48,
+            "count": 20
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:51:40"
+    },
+    {
+        "id": 119,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 57,
+            "count": 1
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 15:52:45"
+    },
+    {
+        "id": 120,
+        "type": "test_finish",
+        "message": "Test yakunlandi: 6/13",
+        "meta": {
+            "user_id": 3,
+            "type": "bilet"
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 3,
+        "created_at": "2026-06-23 16:05:20"
+    },
+    {
+        "id": 121,
+        "type": "delete_bilet",
+        "message": "Bilet bo'yicha savollar o'chirildi",
+        "meta": {
+            "bilet_id": 62,
+            "count": 13
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 16:06:08"
+    },
+    {
+        "id": 122,
+        "type": "import",
+        "message": "Savollar import",
+        "meta": {
+            "bilet_id": 62,
+            "count": 15
+        },
+        "ip": "37.110.214.27",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "user_id": 1,
+        "created_at": "2026-06-23 16:06:19"
+    }
+]

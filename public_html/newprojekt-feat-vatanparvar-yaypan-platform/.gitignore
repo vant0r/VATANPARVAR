@@ -1,0 +1,28 @@
+# Yuklangan fayllar (foydalanuvchilarning rasmlari, hujjatlari)
+assets/uploads/*
+!assets/uploads/.gitkeep
+
+# Server uchun maxsus fayllar
+.htaccess
+php.ini
+error_log
+
+# IDE va muharrir fayllari
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Log fayllari
+*.log
+
+# Backup
+*.bak
+*.tmp
+*~
+
+# Composer (agar kelajakda qo'shilsa)
+vendor/
+composer.lock

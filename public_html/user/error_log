@@ -1,0 +1,4 @@
+[23-Jun-2026 16:00:38 Asia/Tashkent] PHP Fatal error:  Uncaught Error: Call to undefined function vpy_test_questions_by_bilet() in /home/host8873/public_html/user/test.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/host8873/public_html/user/test.php on line 60
