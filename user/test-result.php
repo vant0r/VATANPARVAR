@@ -3,11 +3,26 @@ require_once __DIR__ . '/../includes/panel_layout.php';
 vpy_require_login('/login.php');
 
 $u = vpy_user();
-$id = (int)vpy_get('id');
-$result = vpy_find('natijalar', 'id', $id);
-if (!$result || (int)$result['user_id'] !== (int)$u['id']) {
-    http_response_code(404);
-    die('Natija topilmadi');
+$is_bilet50 = vpy_get('type') === 'bilet50';
+
+if ($is_bilet50) {
+    // Biletlar 50 - mashq rejimi, session dan o'qiymiz
+    $result = $_SESSION['bilet50_result'] ?? null;
+    if (!$result) {
+        vpy_redirect('/user/testlar.php');
+    }
+    $result['created_at'] = date('Y-m-d H:i:s');
+    $result['user_id'] = (int)$u['id'];
+    $result['type'] = 'bilet50';
+    $result['answers'] = $result['answers'] ?? [];
+    unset($_SESSION['bilet50_result']);
+} else {
+    $id = (int)vpy_get('id');
+    $result = vpy_find('natijalar', 'id', $id);
+    if (!$result || (int)$result['user_id'] !== (int)$u['id']) {
+        http_response_code(404);
+        die('Natija topilmadi');
+    }
 }
 
 $score = (int)$result['score'];
@@ -84,7 +99,12 @@ vpy_panel_sidebar('natijalar', false);
         </div>
     </div>
     <h1 class="result-title"><?= $passed ? e(t('test_result_passed')) : e(t('test_result_failed')) ?></h1>
-    <p class="result-sub"><?= e(t('test_result_score')) ?>: <?= $score ?> / <?= $total ?> · <?= floor((int)$result['duration'] / 60) ?>:<?= sprintf('%02d', (int)$result['duration'] % 60) ?></p>
+    <p class="result-sub">
+        <?php if ($is_bilet50): ?>
+            <span style="background:rgba(232,168,56,0.2);padding:4px 12px;border-radius:20px;font-size:0.85rem;font-weight:600">🎯 Mashq rejimi — natijalar saqlanmaydi</span><br style="margin-bottom:8px">
+        <?php endif; ?>
+        <?= e(t('test_result_score')) ?>: <?= $score ?> / <?= $total ?> · <?= floor((int)$result['duration'] / 60) ?>:<?= sprintf('%02d', (int)$result['duration'] % 60) ?>
+    </p>
 
     <div class="result-stats">
         <div class="result-stat">
@@ -102,8 +122,13 @@ vpy_panel_sidebar('natijalar', false);
     </div>
 
     <div class="result-actions">
-        <a href="/user/test.php" class="btn btn-primary"><?= e(t('test_result_retry')) ?> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 019-9 9.75 9.75 0 016.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg></a>
-        <a href="/user/" class="btn btn-ghost"><?= e(t('btn_back')) ?></a>
+        <?php if ($is_bilet50): ?>
+            <a href="/user/test.php?type=bilet50&bilet=<?= (int)($result['bilet_num'] ?? 1) ?>" class="btn btn-primary">Qayta mashq <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 019-9 9.75 9.75 0 016.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg></a>
+            <a href="/user/testlar.php#biletlar50" class="btn btn-ghost">Biletlarga qaytish</a>
+        <?php else: ?>
+            <a href="/user/test.php" class="btn btn-primary"><?= e(t('test_result_retry')) ?> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 019-9 9.75 9.75 0 016.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg></a>
+            <a href="/user/" class="btn btn-ghost"><?= e(t('btn_back')) ?></a>
+        <?php endif; ?>
     </div>
 </div>
 

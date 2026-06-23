@@ -29,6 +29,12 @@ if ($id) {
 $is_edit = !empty($q);
 
 if (vpy_is_post() && vpy_csrf_check(vpy_post('csrf'))) {
+    // POST overflow detection - fayl hajmi juda katta bo'lganda $_POST bo'sh bo'ladi
+    if (empty($_POST) && isset($_SERVER['CONTENT_LENGTH']) && (int)$_SERVER['CONTENT_LENGTH'] > 0) {
+        vpy_flash_set('error', 'Fayl hajmi juda katta. Iltimos, kichikroq rasm yuklang (max 5MB).');
+        vpy_redirect('/admin/savollar-form.php' . ($id ? '?id=' . $id : ''));
+    }
+
     $rasm_url = $q['rasm'] ?? '';
     if (!empty($_FILES['rasm']['tmp_name']) && is_uploaded_file($_FILES['rasm']['tmp_name'])) {
         $ext = strtolower(pathinfo($_FILES['rasm']['name'], PATHINFO_EXTENSION));
@@ -66,6 +72,12 @@ if (vpy_is_post() && vpy_csrf_check(vpy_post('csrf'))) {
         'izoh_cyrl' => vpy_post('izoh_cyrl'),
         'holat' => vpy_post('holat', 'faol'),
     ];
+
+    // Safety: agar tahrirlashda bilet_id POST dan kelmasa, asl qiymatini saqlaymiz
+    if ($is_edit && !isset($_POST['bilet_id'])) {
+        $data['bilet_id'] = (int)$q['bilet_id'];
+    }
+
     if ($is_edit) {
         $set = implode(', ', array_map(fn($k) => "$k = :$k", array_keys($data)));
         $st = $pdo->prepare("UPDATE test_savollar SET $set WHERE id = :id");

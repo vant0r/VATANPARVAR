@@ -48,7 +48,7 @@ vpy_panel_sidebar('testlar', false);
 
 <main class="main">
 <?php vpy_panel_topbar(t('tickets_title'), t('tickets_subtitle'),
-    '<a href="/user/test.php?type=quick" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>' . e(t('user_quick_test')) . '</a>'
+    '<a href="#biletlar50" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Biletlar 50 · Mashq</a>'
 ); ?>
 
 <div class="card">
@@ -73,6 +73,32 @@ vpy_panel_sidebar('testlar', false);
                 </div>
                 <div class="bilet-meta">
                     <span class="bilet-count"><?= $count ?: '—' ?> <?= e(t('ticket_count')) ?></span>
+                </div>
+            </a>
+        <?php endfor; ?>
+    </div>
+</div>
+
+<div class="card" id="biletlar50" style="margin-top:24px">
+    <div class="card-head">
+        <h2>Biletlar 50 · Mashq rejimi</h2>
+        <span class="chip" style="background:rgba(232,168,56,0.15);color:#A87830;font-weight:700">⏱ 60 daqiqa · 50 savol</span>
+    </div>
+    <p style="color:var(--muted);margin-bottom:18px;font-size:0.9rem;">
+        Barcha savollar 50 talik guruhlarga bo'lingan. Natijalar saqlanmaydi — faqat mashq uchun.
+    </p>
+    <div class="bilet-grid">
+        <?php
+        $total_bilet50 = vpy_test_bilet50_count();
+        for ($i = 1; $i <= $total_bilet50; $i++):
+        ?>
+            <a href="/user/test.php?type=bilet50&bilet=<?= $i ?>" class="bilet-card">
+                <div>
+                    <div class="bilet-label">Bilet 50</div>
+                    <div class="bilet-num"><?= sprintf('%02d', $i) ?></div>
+                </div>
+                <div class="bilet-meta">
+                    <span class="bilet-count">50 <?= e(t('ticket_count')) ?></span>
                 </div>
             </a>
         <?php endfor; ?>

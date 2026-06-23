@@ -6,8 +6,13 @@ $u = vpy_user();
 $type = vpy_get('type', 'quick');
 $bilet_id = (int)vpy_get('bilet', 0);
 
-// Bilet mavjudligini tekshirish (1-65 oralig'ida)
-if ($bilet_id > 0 && ($bilet_id < 1 || $bilet_id > 65)) {
+// Bilet mavjudligini tekshirish
+if ($type === 'bilet50') {
+    $max_bilet50 = vpy_test_bilet50_count();
+    if ($bilet_id < 1 || $bilet_id > $max_bilet50) {
+        vpy_redirect('/user/testlar.php?error=invalid_bilet50');
+    }
+} elseif ($bilet_id > 0 && ($bilet_id < 1 || $bilet_id > 65)) {
     vpy_redirect('/user/test.php?error=invalid_ticket');
 }
 
@@ -33,29 +38,46 @@ if (vpy_is_post() && vpy_post('action') === 'finish' && vpy_csrf_check(vpy_post(
             $detail[] = ['question_id' => (int)$qid, 'answer' => $ans, 'correct' => $q ? $q['togri'] : null, 'is_correct' => $q && strtoupper($ans) === strtoupper($q['togri'])];
         }
     }
-    $row = [
-        'id' => vpy_id_next('natijalar'),
-        'user_id' => (int)$u['id'],
-        'type' => $session_bilet ? 'bilet' : $session_type,
-        'bilet_id' => $session_bilet ?: null,
-        'score' => $correct,
-        'total' => count($answers),
-        'correct' => $correct,
-        'wrong' => count($answers) - $correct,
-        'duration' => $duration,
-        'answers' => $detail,
-        'created_at' => date('Y-m-d H:i:s')
-    ];
-    vpy_upsert('natijalar', $row);
-    $u['tests_taken'] = ((int)($u['tests_taken'] ?? 0)) + 1;
-    if ($correct > (int)($u['best_score'] ?? 0)) $u['best_score'] = $correct;
-    vpy_upsert('users', $u);
-    vpy_log('test_finish', "Test yakunlandi: $correct/" . count($answers), ['user_id' => $u['id'], 'type' => $row['type']]);
-    vpy_redirect('/user/test-result.php?id=' . $row['id']);
+    if ($session_type !== 'bilet50') {
+        $row = [
+            'id' => vpy_id_next('natijalar'),
+            'user_id' => (int)$u['id'],
+            'type' => $session_bilet ? 'bilet' : $session_type,
+            'bilet_id' => $session_bilet ?: null,
+            'score' => $correct,
+            'total' => count($answers),
+            'correct' => $correct,
+            'wrong' => count($answers) - $correct,
+            'duration' => $duration,
+            'answers' => $detail,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+        vpy_upsert('natijalar', $row);
+        $u['tests_taken'] = ((int)($u['tests_taken'] ?? 0)) + 1;
+        if ($correct > (int)($u['best_score'] ?? 0)) $u['best_score'] = $correct;
+        vpy_upsert('users', $u);
+        vpy_log('test_finish', "Test yakunlandi: $correct/" . count($answers), ['user_id' => $u['id'], 'type' => $row['type']]);
+        vpy_redirect('/user/test-result.php?id=' . $row['id']);
+    } else {
+        // Biletlar 50 - mashq rejimi, natijalar saqlanmaydi
+        $_SESSION['bilet50_result'] = [
+            'score' => $correct,
+            'total' => count($answers),
+            'correct' => $correct,
+            'wrong' => count($answers) - $correct,
+            'duration' => $duration,
+            'bilet_num' => $session_bilet,
+            'answers' => $detail
+        ];
+        vpy_redirect('/user/test-result.php?type=bilet50');
+    }
 }
 
-// Savollarni olish - bilet bo'yicha yoki tasodifiy
-if ($bilet_id > 0) {
+// Savollarni olish - bilet50, bilet bo'yicha yoki tasodifiy
+if ($type === 'bilet50' && $bilet_id > 0) {
+    // Biletlar 50 - virtual bilet (50 ta savol, id bo'yicha tartiblangan)
+    $questions = vpy_test_questions_bilet50($bilet_id);
+} elseif ($bilet_id > 0) {
     // Bilet bo'yicha savollarni olish (bilet_id bo'yicha filter)
     $questions = vpy_test_questions_by_bilet($bilet_id);
 } else {
@@ -127,6 +149,8 @@ vpy_panel_head($bilet_id ? sprintf('%s %02d / 65', t('ticket_label'), $bilet_id)
 .shortcuts-info kbd{background:var(--light);padding:2px 10px;border-radius:4px;border:1px solid var(--border);font-size:0.7rem;font-weight:700;color:var(--dark-soft)}
 .ticket-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:6px 18px;border-radius:var(--pill);font-weight:700;font-size:0.85rem}
 @media (max-width:640px){.q-card{padding:24px}.test-head{padding:18px;flex-direction:column;align-items:stretch}}
+.q-card.answered .q-answer{cursor:default;pointer-events:none}
+.q-card.answered .q-answer:hover{transform:none;border-color:var(--border);background:rgba(255,253,249,0.6)}
 CSS);
 vpy_panel_sidebar('test', false);
 ?>
@@ -254,7 +278,7 @@ vpy_panel_sidebar('test', false);
     var current = 0;
     var answers = {};
     var startTime = Date.now();
-    var totalDuration = <?= $type === 'full' ? 1500 : 1500 ?>;
+    var totalDuration = <?= $type === 'bilet50' ? 3600 : 1500 ?>;
     var endTime = startTime + totalDuration * 1000;
     var qNum = document.getElementById('qNum');
     var progressFill = document.getElementById('progressFill');
@@ -315,6 +339,10 @@ vpy_panel_sidebar('test', false);
         q.querySelectorAll('.q-answer').forEach(function(a){
             a.addEventListener('click', function(){
                 var qid = q.getAttribute('data-q-id');
+                
+                // Agar savol allaqachon javob berilgan bo'lsa, qayta tanlashga ruxsat bermaslik
+                if (answers[qid] !== undefined) return;
+                
                 var selectedLetter = a.getAttribute('data-letter');
                 
                 // Avval barcha javoblarni tozalash
@@ -343,6 +371,8 @@ vpy_panel_sidebar('test', false);
                 }
                 
                 updateGridColors();
+                // Savolni "javob berilgan" deb belgilash
+                q.classList.add('answered');
             });
         });
     });

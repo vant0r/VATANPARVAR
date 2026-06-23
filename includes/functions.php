@@ -275,3 +275,31 @@ function vpy_phone_normalize($p) {
     if (strlen($p) === 13 && strpos($p, '998') === 0) return '+' . substr($p, 1);
     return '+' . $p;
 }
+
+
+
+/**
+ * "Biletlar 50" mashq rejimi uchun - barcha faol savollarni id bo'yicha tartiblaydi
+ * va 50 talik guruhga bo'lib, berilgan bilet raqamiga mos savollarni qaytaradi.
+ * Masalan: bilet_num=1 → savollar 1-50, bilet_num=2 → 51-100, ...
+ */
+function vpy_test_questions_bilet50($bilet_num) {
+    $pdo = vpy_pdo();
+    if (!$pdo) return [];
+    try {
+        $st = $pdo->query("SELECT * FROM test_savollar WHERE holat='faol' ORDER BY id ASC");
+        $all = $st->fetchAll();
+        $offset = ((int)$bilet_num - 1) * 50;
+        return array_slice($all, $offset, 50);
+    } catch (Exception $e) {
+        return [];
+    }
+}
+
+/**
+ * "Biletlar 50" uchun jami nechta bilet borligini hisoblaydi.
+ */
+function vpy_test_bilet50_count() {
+    $total = vpy_test_count();
+    return $total > 0 ? (int)ceil($total / 50) : 0;
+}
