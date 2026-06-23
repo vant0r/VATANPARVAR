@@ -73,9 +73,22 @@ if (vpy_is_post() && vpy_csrf_check(vpy_post('csrf'))) {
         'holat' => vpy_post('holat', 'faol'),
     ];
 
-    // Safety: agar tahrirlashda bilet_id POST dan kelmasa, asl qiymatini saqlaymiz
-    if ($is_edit && !isset($_POST['bilet_id'])) {
-        $data['bilet_id'] = (int)$q['bilet_id'];
+    // Safety: tahrirlashda bilet_id ni himoya qilish
+    if ($is_edit) {
+        $original_bilet = (int)($q['bilet_id'] ?? 0);
+        $submitted_bilet = (int)($data['bilet_id'] ?? 0);
+        $hidden_original = (int)vpy_post('original_bilet_id', 0);
+        
+        // Agar bilet_id POST dan kelmasa yoki 0 bo'lsa, asl qiymatini saqlaymiz
+        if (!isset($_POST['bilet_id']) || $submitted_bilet < 1) {
+            $data['bilet_id'] = $original_bilet;
+        }
+        
+        // Agar rasm yuklangan va bilet_id o'zgargan bo'lsa, hidden field orqali tekshiramiz
+        if (!empty($_FILES['rasm']['tmp_name']) && $submitted_bilet !== $hidden_original && $hidden_original > 0) {
+            // Bilet_id o'z-o'zidan o'zgarmagan bo'lishi kerak - original qiymatni saqlaymiz
+            $data['bilet_id'] = $hidden_original;
+        }
     }
 
     if ($is_edit) {
@@ -118,6 +131,7 @@ vpy_panel_sidebar('savollar', true);
 
 <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf" value="<?= e(vpy_csrf()) ?>">
+    <?php if ($is_edit): ?><input type="hidden" name="original_bilet_id" value="<?= (int)$q['bilet_id'] ?>"><?php endif; ?>
 
     <div class="card">
         <div class="card-head"><h2>Asosiy ma'lumotlar</h2></div>
