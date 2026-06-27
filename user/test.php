@@ -320,6 +320,9 @@ vpy_panel_sidebar('test', false);
     var answers = {};
     var startTime = Date.now();
     var totalDuration = <?= $type === 'bilet50' ? 3600 : 1500 ?>;
+    var testType = '<?= e($type) ?>';
+    var wrongCount = 0;
+    var maxWrong = testType === 'exam' ? 2 : 9999;
     var endTime = startTime + totalDuration * 1000;
     var qNum = document.getElementById('qNum');
     var progressFill = document.getElementById('progressFill');
@@ -403,6 +406,7 @@ vpy_panel_sidebar('test', false);
                     a.classList.add('correct');
                 } else {
                     a.classList.add('wrong');
+                    wrongCount++;
                     // To'g'ri javobni ko'rsatish
                     q.querySelectorAll('.q-answer').forEach(function(x){
                         if (x.getAttribute('data-letter').toUpperCase() === correctAnswers[qid].toUpperCase()) {
@@ -414,6 +418,15 @@ vpy_panel_sidebar('test', false);
                 updateGridColors();
                 // Savolni "javob berilgan" deb belgilash
                 q.classList.add('answered');
+                
+                // Imtihon rejimida 2 ta xato bo'lsa avtomatik tugatish
+                if (wrongCount >= maxWrong) {
+                    setTimeout(function(){
+                        alert('Imtihondan o\'tmadingiz! ' + wrongCount + ' ta xato javob berdingiz.');
+                        submitForm();
+                    }, 800);
+                    return;
+                }
             });
         });
     });
