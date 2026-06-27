@@ -204,6 +204,7 @@ return [
     'biletlar_20_title' => 'Biletlar 20',
     'biletlar_50_title' => 'Biletlar 50',
     'exam_title' => 'Imtihon topshirish',
+    'xatolarim_title' => 'Xatolarim',
     'tickets_subtitle' => 'Rasmiy YHQ biletlari bo\'yicha mashq qiling',
     'ticket_label' => 'Bilet',
     'ticket_count' => 'savol',

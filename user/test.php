@@ -94,6 +94,30 @@ if ($type === 'bilet50' && $bilet_id > 0) {
     } else {
         $questions = vpy_test_questions(20, null);
     }
+} elseif ($type === 'xatolar' && $bilet_id > 0) {
+    // Xatolarim - foydalanuvchi xato qilgan savollar
+    $all_results_x = vpy_filter('natijalar', fn($r) => (int)$r['user_id'] === (int)$u['id']);
+    $wrong_qids = [];
+    foreach ($all_results_x as $rx) {
+        if (empty($rx['answers'])) continue;
+        foreach ($rx['answers'] as $ax) {
+            if (empty($ax['is_correct'])) {
+                $wrong_qids[(int)$ax['question_id']] = true;
+            }
+        }
+    }
+    $pdo_x = vpy_pdo();
+    $questions = [];
+    if ($pdo_x && !empty($wrong_qids)) {
+        $ids_x = array_keys($wrong_qids);
+        $ph_x = implode(',', array_fill(0, count($ids_x), '?'));
+        $st_x = $pdo_x->prepare("SELECT * FROM test_savollar WHERE id IN ($ph_x) AND holat='faol' ORDER BY bilet_id ASC, tartib ASC");
+        $st_x->execute($ids_x);
+        $all_wrong = $st_x->fetchAll();
+        // 20 talik biletlarga bo'lish
+        $chunks_x = array_chunk($all_wrong, 20);
+        $questions = $chunks_x[$bilet_id - 1] ?? [];
+    }
 } elseif ($bilet_id > 0) {
     // Bilet bo'yicha savollarni olish (bilet_id bo'yicha filter)
     $questions = vpy_test_questions_by_bilet($bilet_id);

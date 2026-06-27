@@ -195,6 +195,7 @@ function vpy_panel_sidebar($current, $is_admin = false) {
         ['/user/testlar20.php', 'testlar20', 'biletlar_20_title', 'M21 8v13H3V8|M1 3h22v5H1z|M10 12h4'],
         ['/user/testlar50.php', 'testlar50', 'biletlar_50_title', 'M4 5h16v2H4V5zm0 6h16v2H4v-2zm0 6h16v2H4v-2z'],
         ['/user/test.php?type=exam', 'exam', 'exam_title', 'M9 12l2 2 4-4|circle:cx=12,cy=12,r=10'],
+        ['/user/xatolarim.php', 'xatolarim', 'xatolarim_title', 'M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
         ['/user/natijalar.php', 'natijalar', 'user_recent_tests', 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z|M14 2v6h6|M16 13H8M16 17H8'],
         ['/user/reyting.php', 'reyting', 'rating_title', 'M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2|circle:cx=8.5,cy=7,r=4|M20 8v6M23 11h-6'],
         ['/user/tariflar.php', 'tariflar', 'tariffs_title', 'M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z|circle:cx=7,cy=7,r=1.4'],
