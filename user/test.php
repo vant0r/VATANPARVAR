@@ -219,12 +219,12 @@ vpy_panel_sidebar('test', false);
                         <div class="q-image"><img src="<?= e($q['rasm']) ?>" alt="" loading="lazy"></div>
                     <?php endif; ?>
                     <div class="q-answers">
-                        <?php foreach ($variants as $v): ?>
+                        <?php $fi = 1; foreach ($variants as $v): ?>
                             <button type="button" class="q-answer" data-letter="<?= e($v[0]) ?>">
-                                <span class="letter"><?= e($v[0]) ?></span>
+                                <span class="letter">F<?= $fi ?></span>
                                 <span><?= e($v[1]) ?></span>
                             </button>
-                        <?php endforeach; ?>
+                        <?php $fi++; endforeach; ?>
                     </div>
                 </div>
             <?php endforeach; ?>
