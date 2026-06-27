@@ -100,7 +100,7 @@ if (vpy_is_post() && vpy_csrf_check(vpy_post('csrf'))) {
         try {
             $st->execute($params);
             vpy_flash_set('success', t('msg_updated'));
-            vpy_redirect('/admin/savollar.php');
+            vpy_redirect('/admin/savollar.php?bilet=' . (int)$data['bilet_id']);
         } catch (Exception $e) {
             vpy_flash_set('error', 'Saqlashda xato yuz berdi: ' . $e->getMessage());
         }
@@ -112,7 +112,7 @@ if (vpy_is_post() && vpy_csrf_check(vpy_post('csrf'))) {
         try {
             $st->execute();
             vpy_flash_set('success', t('msg_added'));
-            vpy_redirect('/admin/savollar.php');
+            vpy_redirect('/admin/savollar.php?bilet=' . (int)$data['bilet_id']);
         } catch (Exception $e) {
             vpy_flash_set('error', 'Saqlashda xato yuz berdi: ' . $e->getMessage());
         }
