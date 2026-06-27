@@ -201,6 +201,9 @@ return [
     'test_explain' => 'Изоҳ',
 
     'tickets_title' => 'Билетлар',
+    'biletlar_20_title' => 'Билетлар 20',
+    'biletlar_50_title' => 'Билетлар 50',
+    'exam_title' => 'Имтиҳон топшириш',
     'tickets_subtitle' => 'Расмий ЙҲҚ билетлари бўйича машқ қилинг',
     'ticket_label' => 'Билет',
     'ticket_count' => 'савол',

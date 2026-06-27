@@ -1,0 +1,20 @@
+[
+    {
+        "user_id": 4,
+        "token_hash": "d3f5cca903652a76040b3aa6d60c9baff6ce4c22455ef4c8bdc3bee5101ac2db",
+        "expires_at": "2026-07-21 20:32:49",
+        "created_at": "2026-06-21 20:32:49"
+    },
+    {
+        "user_id": 3,
+        "token_hash": "559c1e4f44a1988e880b9077aa2219e8782ca772e14e035b31d6dd74c1e2b4b5",
+        "expires_at": "2026-07-22 22:01:13",
+        "created_at": "2026-06-22 22:01:13"
+    },
+    {
+        "user_id": 1,
+        "token_hash": "8f99690e55401a6f908b84b13ce13ca8d5f704bd44358000cfda2a6ceef468c6",
+        "expires_at": "2026-07-23 15:47:26",
+        "created_at": "2026-06-23 15:47:26"
+    }
+]

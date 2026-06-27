@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "user_id": 3,
+        "tariff_id": 3,
+        "tariff_name": "Premium",
+        "amount": 120000,
+        "method": "humo",
+        "status": "failed",
+        "transaction_id": "",
+        "invoice_number": "INV-2026-0001",
+        "screenshot": "",
+        "expires_at": null,
+        "paid_at": null,
+        "created_at": "2026-06-21 19:41:13"
+    },
+    {
+        "id": 2,
+        "user_id": 3,
+        "tariff_id": 2,
+        "tariff_name": "Standart",
+        "amount": 45000,
+        "method": "visa",
+        "status": "success",
+        "transaction_id": "MANUAL-31680D",
+        "invoice_number": "INV-2026-0002",
+        "screenshot": "/assets/uploads/pay_2_1782053282.jpg",
+        "expires_at": "2026-07-21 19:48:20",
+        "paid_at": "2026-06-21 19:48:20",
+        "created_at": "2026-06-21 19:48:02"
+    },
+    {
+        "id": 3,
+        "user_id": 3,
+        "tariff_id": 1,
+        "tariff_name": "Kunlik",
+        "amount": 2000,
+        "method": "visa",
+        "status": "success",
+        "transaction_id": "MANUAL-6946A6",
+        "invoice_number": "INV-2026-0003",
+        "screenshot": "/assets/uploads/pay_3_1782053885.jpg",
+        "expires_at": "2026-06-22 19:59:33",
+        "paid_at": "2026-06-21 19:59:33",
+        "created_at": "2026-06-21 19:58:05",
+        "approved_by": 1,
+        "approved_at": "2026-06-21 19:59:33"
+    }
+]

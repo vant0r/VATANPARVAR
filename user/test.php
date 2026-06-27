@@ -73,10 +73,27 @@ if (vpy_is_post() && vpy_post('action') === 'finish' && vpy_csrf_check(vpy_post(
     }
 }
 
-// Savollarni olish - bilet50, bilet bo'yicha yoki tasodifiy
+// Savollarni olish - bilet50, exam, bilet bo'yicha yoki tasodifiy
 if ($type === 'bilet50' && $bilet_id > 0) {
     // Biletlar 50 - virtual bilet (50 ta savol, id bo'yicha tartiblangan)
     $questions = vpy_test_questions_bilet50($bilet_id);
+} elseif ($type === 'exam') {
+    // Imtihon topshirish - tasodifiy biletdan 20 ta savol
+    $pdo_exam = vpy_pdo();
+    $exam_bilet = 0;
+    if ($pdo_exam) {
+        try {
+            $st_exam = $pdo_exam->query("SELECT DISTINCT bilet_id FROM test_savollar WHERE holat='faol' AND bilet_id > 0 ORDER BY RAND() LIMIT 1");
+            $row_exam = $st_exam->fetch();
+            if ($row_exam) $exam_bilet = (int)$row_exam['bilet_id'];
+        } catch (Exception $e) {}
+    }
+    if ($exam_bilet > 0) {
+        $questions = vpy_test_questions_by_bilet($exam_bilet);
+        $bilet_id = $exam_bilet; // Bilet raqamini ko'rsatish uchun
+    } else {
+        $questions = vpy_test_questions(20, null);
+    }
 } elseif ($bilet_id > 0) {
     // Bilet bo'yicha savollarni olish (bilet_id bo'yicha filter)
     $questions = vpy_test_questions_by_bilet($bilet_id);
